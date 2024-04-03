@@ -10,6 +10,7 @@ public class Connection {
 
     private static final String USER_AGENT = "Mozilla/5.0";
     private static String[] URLS = {};
+    private static int instance = 0;
 
     public Connection(String[] urls) {
         URLS = urls;
@@ -41,8 +42,6 @@ public class Connection {
             }
             in.close();
 
-            // print result
-            return response;
         } else {
             System.out.println("GET request not worked");
         }
@@ -51,9 +50,7 @@ public class Connection {
     }
 
     private static String RoundRobin(String[] URLS) {
-        int instance = 0;
-
-        if (instance < 2) {
+        if (instance < 1) {
             instance += 1;
             return URLS[instance];
         } else {
