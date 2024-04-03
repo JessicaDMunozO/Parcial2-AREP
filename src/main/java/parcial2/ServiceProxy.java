@@ -6,7 +6,7 @@ public class ServiceProxy {
     public static void main(String... args) {
         staticFiles.location("/public");
 
-        String[] urls = {"http://localhost:4567/", "http://localhost:4567/"};
+        String[] urls = { args[0], args[1] };
         Connection connection = new Connection(urls);
 
         port(getPort());

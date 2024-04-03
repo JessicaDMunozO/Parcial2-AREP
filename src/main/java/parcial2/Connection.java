@@ -18,7 +18,7 @@ public class Connection {
 
     public static StringBuffer connect(String value, String service) throws IOException {
 
-        String url = RoundRobin(URLS);
+        String url = RoundRobin();
 
         String final_url = url + service + "?value=" + value;
         URL obj = new URL(final_url);
@@ -49,7 +49,7 @@ public class Connection {
         return response;
     }
 
-    private static String RoundRobin(String[] URLS) {
+    private static String RoundRobin() {
         if (instance < 1) {
             instance += 1;
             return URLS[instance];
