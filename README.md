@@ -5,6 +5,7 @@ Maven, java, git y verificar disponibilidad de puertos.
 
 ## Instalación
 1. Por terminal
+   
    En tres cmds diferentes:
    Clonar el proyecto del repositorio y acceder al directorio que contiene el proyecto. Ejecutar el comando `mvn clean install`.
    
@@ -29,6 +30,7 @@ Maven, java, git y verificar disponibilidad de puertos.
      ![image](https://github.com/JessicaDMunozO/Parcial2-AREP/assets/123814482/d09cf12f-3e83-4fee-b677-12999dcd5f21)
 
 2. Con EC2
+   
    Se crearon dos instancias nuevas de EC2 y se agregaron las reglas de entrada para los puertos. Además se instaló java, maven y git para poder ejecutar el proyecto. Después se siguieron
    los mismos pasos enunciados antes para clonar, y ejecutar el proyecto.
 
